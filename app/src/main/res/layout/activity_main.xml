@@ -10,12 +10,14 @@
         android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:focusable="false"
         android:focusableInTouchMode="true"
         android:inputType="numberSigned|numberDecimal"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="8dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button0"
@@ -121,8 +123,9 @@
         android:minWidth="48dp"
         android:text="9"
         android:textSize="12sp"
-        app:layout_constraintTop_toBottomOf="@+id/newNumber"
-        tools:layout_editor_absoluteX="213dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newNumber" />
 
     <Button
         android:id="@+id/buttonMinus"
@@ -203,19 +206,22 @@
         android:id="@+id/operation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:textSize="18sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="51dp"
+        app:layout_constraintEnd_toStartOf="@+id/newNumber"
         tools:layout_editor_absoluteY="71dp" />
 
     <EditText
         android:id="@+id/newNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="numberSigned|numberDecimal"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="61dp" />
+        app:layout_constraintStart_toStartOf="@+id/result"
+        app:layout_constraintTop_toBottomOf="@+id/result" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
